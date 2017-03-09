@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">ログイン</h3>
+  </div>
+  <div class="panel-body">
+    <form class="form-signin">
+      <input name="email" type="email" [(ngModel)]="email" class="form-control" placeholder="メールアドレス" required autofocus>
+      <input name="password" type="password"  [(ngModel)]="password" class="form-control" placeholder="パスワード" required>
+      <button class="btn btn-lg btn-primary btn-block" (click)="login()" [disabled]="checkInputValue()">
+        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> ログイン
+      </button>
+    </form>
+  </div>
+</div>
