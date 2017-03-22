@@ -1,4 +1,4 @@
-import { Component,Input }  from '@angular/core';
+import { Component }        from '@angular/core';
 import { Router }           from '@angular/router';
 import { AuthService }      from '../services/auth.service';
 import { Observable }       from 'rxjs/Observable';
@@ -12,6 +12,7 @@ import 'rxjs/add/operator/map';
 export class LoginComponent {
   email: string = '';
   password: string = '';
+  message: string = '';
 
   /**
    * 初期処理
@@ -23,15 +24,22 @@ export class LoginComponent {
    */
   login() {
 
-    this.authService.login(this.email, this.password).subscribe(() => {
-
-      if (this.authService.isLoggedIn) {
-        let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/home';
-        this.router.navigate([redirect]);
-      } else {
-        console.log('login error !!');
-      }
-    });
+    this.authService.login(this.email, this.password)
+      .subscribe(
+        () => {
+          if (this.authService.isLoggedIn) {
+            this.message = "";
+            let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/home';
+            this.router.navigate([redirect]);
+          } else {
+            this.message = "ログインに失敗しました。";
+            console.log(this.message);
+          }
+        },
+        err => {
+          this.message = err;
+        }
+      );
   }
 
   /**

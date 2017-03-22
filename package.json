@@ -19,8 +19,8 @@
     "pretest:once": "npm run build",
     "test:once": "karma start karma.conf.js --single-run",
     "lint": "tslint ./src/**/*.ts -t verbose",
-    "copy": "cpx \"./src/**/{*.html,*.css,*.js,*.jpeg,*.gif,*.json}\" ./dist",
-    "copy:watch": "cpx \"./src/**/{*.html,*.css,*.js,*.jpeg,*.gif,*.json}\" ./dist --watch",
+    "copy": "cpx \"./src/**/{*.html,*.css,*.js,*.jpeg,*.png,*.gif,*.json}\" ./dist",
+    "copy:watch": "cpx \"./src/**/{*.html,*.css,*.js,*.jpeg,*.png,*.gif,*.json}\" ./dist --watch",
     "clean": "rimraf ./dist"
   },
   "keywords": [],

@@ -3,6 +3,7 @@ import { BrowserModule }          from '@angular/platform-browser';
 import { CommonModule }           from '@angular/common';
 import { FormsModule }            from '@angular/forms';
 import { Router }                 from '@angular/router';
+import { JsonpModule }            from '@angular/http';
 
 import { AppComponent }           from './app.component';
 import { AppRoutingModule }       from './app-routing.module';
@@ -16,6 +17,7 @@ import { UserModule }             from './user/user.module';
     BrowserModule,
     CommonModule,
     FormsModule,
+    JsonpModule,
     HomeModule,
     LoginModule,
     UserModule,
