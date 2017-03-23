@@ -13,6 +13,9 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul *ngIf="authService.isLoggedIn" class="nav navbar-nav">
+        <li class="active">
+          <a routerLink="/member">メンバー管理</a>
+        </li>
       </ul>
       <ul *ngIf="authService.isLoggedIn" class="nav navbar-nav navbar-right">
         <li class="dropdown">

@@ -11,6 +11,7 @@ import { PageNotFoundComponent }  from './not-found.component';
 import { HomeModule }             from './home/home.module';
 import { LoginModule }            from './login/login.module';
 import { UserModule }             from './user/user.module';
+import { MemberModule }           from './member/member.module';
 
 @NgModule({
   imports: [ 
@@ -21,6 +22,7 @@ import { UserModule }             from './user/user.module';
     HomeModule,
     LoginModule,
     UserModule,
+    MemberModule,
     AppRoutingModule
    ],
   declarations: [
